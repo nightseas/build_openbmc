@@ -1,0 +1,20 @@
+From ccd190331ae47fce4dc7444dd0965bc1d3fca7a7 Mon Sep 17 00:00:00 2001
+From: Xiaohai Li <haixiaolee@gmail.com>
+Date: Mon, 9 Mar 2020 12:53:21 +0800
+Subject: [PATCH 2/2] Add webui app for Raspberry Pi.
+
+---
+ .../recipes-phosphor/packagegroups/packagegroup-obmc-apps.bbappend       | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 meta-raspberrypi/recipes-phosphor/packagegroups/packagegroup-obmc-apps.bbappend
+
+diff --git a/meta-raspberrypi/recipes-phosphor/packagegroups/packagegroup-obmc-apps.bbappend b/meta-raspberrypi/recipes-phosphor/packagegroups/packagegroup-obmc-apps.bbappend
+new file mode 100644
+index 0000000..b2125bf
+--- /dev/null
++++ b/meta-raspberrypi/recipes-phosphor/packagegroups/packagegroup-obmc-apps.bbappend
+@@ -0,0 +1 @@
++RDEPENDS_${PN}-extras_append_rpi = " phosphor-webui"
+-- 
+2.7.4
+

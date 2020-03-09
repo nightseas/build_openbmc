@@ -1,0 +1,25 @@
+From a8fc865ae7ba1a25f5a77494f1f8917e5ba8e5d0 Mon Sep 17 00:00:00 2001
+From: Xiaohai Li <haixiaolee@gmail.com>
+Date: Wed, 4 Mar 2020 19:02:25 +0800
+Subject: [PATCH 1/2] Change flash size to 128MiB for Raspberry Pi.
+
+---
+ meta-phosphor/classes/image_types_phosphor.bbclass | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/meta-phosphor/classes/image_types_phosphor.bbclass b/meta-phosphor/classes/image_types_phosphor.bbclass
+index 10388d2..d27e848 100644
+--- a/meta-phosphor/classes/image_types_phosphor.bbclass
++++ b/meta-phosphor/classes/image_types_phosphor.bbclass
+@@ -35,7 +35,7 @@ EXTRA_IMAGECMD_ext4 = "-b ${IMAGE_BLOCK_SIZE}"
+ 
+ # Flash characteristics in KB unless otherwise noted
+ DISTROOVERRIDES .= ":flash-${FLASH_SIZE}"
+-FLASH_SIZE ?= "32768"
++FLASH_SIZE ?= "131072"
+ FLASH_PEB_SIZE ?= "64"
+ # Flash page and overhead sizes in bytes
+ FLASH_PAGE_SIZE ?= "1"
+-- 
+2.7.4
+
